@@ -1,3 +1,21 @@
+# Tales' fork of Mathias's dotfiles
+
+This repo consists basically of [Mathias's dotfiles](https://github.com/mathiasbynens/dotfiles) adapted to my specific needs.
+
+Decided to fork, because of it remains untouched.
+
+## Changes:
+
+- Removed vim files (decided to keep mine in another repo);
+- Small changes in .bash_prompt (changed WHITE spots to RESET);
+- Added a few things to Brewfile;
+- Added a few apps to Caskfile;
+- Small tweaks in the .osx based on my preferences =);
+
+Please prefer Mathias' repo to this one. If you choose to stay, you can all the necessary infos bellow, where I have just let the original README contents: (again, I really recomend you go directly to the [source](https://github.com/mathiasbynens/dotfiles).
+
+---------------------------------------
+
 # Mathias’s dotfiles
 
 ## Installation
