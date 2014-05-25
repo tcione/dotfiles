@@ -37,3 +37,8 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
+
+source /Users/bonjour/.rvm/scripts/rvm
+
+export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
