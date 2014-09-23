@@ -9,8 +9,8 @@ cask install google-chrome 2> /dev/null
 cask install google-chrome-canary 2> /dev/null
 cask install imagealpha 2> /dev/null
 cask install imageoptim 2> /dev/null
-#cask install iterm2 2> /dev/null
-#cask install macvim 2> /dev/null
+cask install iterm2 2> /dev/null
+cask install macvim 2> /dev/null
 #cask install miro-video-converter 2> /dev/null
 #cask install opera 2> /dev/null
 #cask install opera-developer 2> /dev/null
@@ -22,12 +22,18 @@ cask install transmission 2> /dev/null
 #cask install virtualbox 2> /dev/null
 cask install vlc 2> /dev/null
 
-cask install divvy 2> /dev/null
+cask install shiftit 2> /dev/null
 cask install totalfinder 2> /dev/null
 cask install little-snitch 2> /dev/null
-cask install sublime-text3 2> /dev/null
+#cask install sublime-text3 2> /dev/null
 cask install spotify 2> /dev/null
 cask install sequel-pro 2> /dev/null
 cask install keepassx 2> /dev/null
 cask install appcleaner 2> /dev/null
 cask install flux 2> /dev/null
+cask install robomongo 2> /dev/null
+cask install onyx 2> /dev/null
+cask install skype 2> /dev/null
+cask install steam 2> /dev/null
+cask install transmit 2> /dev/null
+cask install spotify 2> /dev/null

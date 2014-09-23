@@ -46,6 +46,7 @@ install p7zip
 
 install orpie
 install mariadb
+install mongodb
 install todo-txt
 
 install php55
