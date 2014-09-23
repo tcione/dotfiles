@@ -33,6 +33,17 @@
 	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 	# Remove branches that have already been merged with master
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+    # Brief status
+    st "status -s"
+    # Pretty log
+    lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+    # all
+    aa "add --all"
+    # who
+    who "shortlog -sn"
+    # undo
+    undo "reset --hard HEAD"
+
 
 [apply]
 	# Detect whitespace errors when applying a patch
@@ -71,6 +82,10 @@
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+    tool vimdiff
+    conflictstyle diff3
+[mergetool]
+    prompt false
 
 # URL shorthands
 [url "git@github.com:"]
