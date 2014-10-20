@@ -42,4 +42,4 @@ export PATH="#{HOMEBREW_PREFIX}/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.rvm/scripts/rvm:$PATH"
 
-source /Users/bonjour/.rvm/scripts/rvm
+source $HOME/.rvm/scripts/rvm
