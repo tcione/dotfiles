@@ -1,39 +1,39 @@
 # Install native apps
 # Usage: `brew bundle Caskfile`
 
-install phinze/cask/brew-cask
-tap caskroom/versions
+brew install phinze/cask/brew-cask
+brew tap caskroom/versions
 
-cask install dropbox 2> /dev/null
-cask install google-chrome 2> /dev/null
-cask install google-chrome-canary 2> /dev/null
-cask install imagealpha 2> /dev/null
-cask install imageoptim 2> /dev/null
-cask install iterm2 2> /dev/null
-cask install macvim 2> /dev/null
+brew cask install dropbox 2> /dev/null
+brew cask install google-chrome 2> /dev/null
+brew cask install google-chrome-canary 2> /dev/null
+brew cask install imagealpha 2> /dev/null
+brew cask install imageoptim 2> /dev/null
+brew cask install iterm2 2> /dev/null
+brew cask install macvim 2> /dev/null
 #cask install miro-video-converter 2> /dev/null
 #cask install opera 2> /dev/null
 #cask install opera-developer 2> /dev/null
 #cask install opera-next 2> /dev/null
-cask install the-unarchiver 2> /dev/null
+brew cask install the-unarchiver 2> /dev/null
 #cask install tor-browser 2> /dev/null
-cask install transmission 2> /dev/null
+brew cask install transmission 2> /dev/null
 #cask install ukelele 2> /dev/null
 #cask install virtualbox 2> /dev/null
-cask install vlc 2> /dev/null
+brew cask install vlc 2> /dev/null
 
-cask install shiftit 2> /dev/null
-cask install totalfinder 2> /dev/null
-cask install little-snitch 2> /dev/null
+brew cask install shiftit 2> /dev/null
+brew cask install totalfinder 2> /dev/null
+brew cask install little-snitch 2> /dev/null
 #cask install sublime-text3 2> /dev/null
-cask install spotify 2> /dev/null
-cask install sequel-pro 2> /dev/null
-cask install keepassx 2> /dev/null
-cask install appcleaner 2> /dev/null
-cask install flux 2> /dev/null
-cask install robomongo 2> /dev/null
-cask install onyx 2> /dev/null
-cask install skype 2> /dev/null
-cask install steam 2> /dev/null
-cask install transmit 2> /dev/null
-cask install spotify 2> /dev/null
+brew cask install spotify 2> /dev/null
+brew cask install sequel-pro 2> /dev/null
+brew cask install keepassx 2> /dev/null
+brew cask install appcleaner 2> /dev/null
+brew cask install flux 2> /dev/null
+brew cask install robomongo 2> /dev/null
+brew cask install onyx 2> /dev/null
+brew cask install skype 2> /dev/null
+brew cask install steam 2> /dev/null
+brew cask install transmit 2> /dev/null
+brew cask install spotify 2> /dev/null
