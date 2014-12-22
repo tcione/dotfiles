@@ -1,5 +1,5 @@
 # Install native apps
-# Usage: `brew bundle Caskfile`
+# Usage: `sh Caskfile`
 
 brew install phinze/cask/brew-cask
 brew tap caskroom/versions
@@ -11,7 +11,6 @@ brew cask install imagealpha 2> /dev/null
 brew cask install imageoptim 2> /dev/null
 brew cask install iterm2 2> /dev/null
 brew cask install macvim 2> /dev/null
-#cask install miro-video-converter 2> /dev/null
 #cask install opera 2> /dev/null
 #cask install opera-developer 2> /dev/null
 #cask install opera-next 2> /dev/null
@@ -22,6 +21,7 @@ brew cask install transmission 2> /dev/null
 #cask install virtualbox 2> /dev/null
 brew cask install vlc 2> /dev/null
 
+brew cask install zquartz 2> /dev/null
 brew cask install shiftit 2> /dev/null
 brew cask install totalfinder 2> /dev/null
 brew cask install little-snitch 2> /dev/null
