@@ -21,12 +21,9 @@ brew cask install transmission 2> /dev/null
 #cask install virtualbox 2> /dev/null
 brew cask install vlc 2> /dev/null
 
-brew cask install zquartz 2> /dev/null
-brew cask install shiftit 2> /dev/null
 brew cask install totalfinder 2> /dev/null
 brew cask install little-snitch 2> /dev/null
 #cask install sublime-text3 2> /dev/null
-brew cask install spotify 2> /dev/null
 brew cask install sequel-pro 2> /dev/null
 brew cask install keepassx 2> /dev/null
 brew cask install appcleaner 2> /dev/null
@@ -37,3 +34,5 @@ brew cask install skype 2> /dev/null
 brew cask install steam 2> /dev/null
 brew cask install transmit 2> /dev/null
 brew cask install spotify 2> /dev/null
+brew cask install zquartz 2> /dev/null
+brew cask install shiftit 2> /dev/null
