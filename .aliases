@@ -16,7 +16,7 @@ alias h="history"
 alias j="jobs"
 alias t="todo.sh -tNcA"
 alias mongodb.start="mongod --config /usr/local/etc/mongod.conf"
-alias brew.update="rvm use system && brew update && brew upgrade && brew cleanup"
+alias brew.update="rvm use system && brew update && brew upgrade --all && brew cleanup && brew cask cleanup"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
