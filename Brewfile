@@ -49,6 +49,7 @@ brew install mariadb
 brew install mongodb
 brew install todo-txt
 brew install ctags-exuberant
+brew install gpg
 
 brew install php55
 
