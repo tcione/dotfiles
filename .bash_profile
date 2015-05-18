@@ -42,5 +42,6 @@ export PATH="#{HOMEBREW_PREFIX}/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.rvm/scripts/rvm:$PATH"
 export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
+export ANDROID_HOME="$(brew --prefix android)"
 
 source $HOME/.rvm/scripts/rvm

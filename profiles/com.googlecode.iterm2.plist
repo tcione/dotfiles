@@ -611,9 +611,9 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>37 186 924 485 0 0 1920 1057 </string>
+	<string>147 188 924 485 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>50 0 905 676 0 0 1920 1057 </string>
+	<string>4 22 1906 1035 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>107 0 905 676 0 0 1920 1057 </string>
 	<key>New Bookmarks</key>
@@ -2172,6 +2172,10 @@
 	<integer>0</integer>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findIgnoreCase_iTerm</key>
+	<true/>
+	<key>findRegex_iTerm</key>
+	<false/>
 	<key>iTerm Version</key>
 	<string>2.0.0.20141103</string>
 </dict>
