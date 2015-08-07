@@ -4,7 +4,7 @@ git pull origin master
 function doIt() {
   rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
     --exclude "README.md" --exclude "LICENSE-MIT.txt" -av --no-perms . ~
-  source ~/.zshrc
+  echo "Please open another terminal window and close this one"
 }
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
   doIt
