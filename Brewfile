@@ -43,6 +43,7 @@ brew install tree
 brew install webkit2png
 brew install zopfli
 brew install p7zip
+brew install tmux
 
 brew install orpie
 brew install mariadb
