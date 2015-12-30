@@ -1,8 +1,8 @@
 # Install command-line tools using Homebrew
-# Usage: `brew bundle Brewfile`
+# Usage: `sh Brewfile`
 
 brew tap homebrew/dupes
-brew tap homebrew/versions
+brew tap caskroom/versions
 brew tap homebrew/homebrew-php
 
 # Make sure we’re using the latest Homebrew
@@ -20,6 +20,7 @@ brew install moreutils
 brew install findutils
 # Install Bash 4
 brew install bash
+brew install zsh
 
 # Install wget with IRI support
 brew install wget --enable-iri
@@ -31,14 +32,10 @@ brew install homebrew/dupes/grep
 # Install other useful binaries
 brew install ack
 brew install pv
-#install exiv2
-#install git
 brew install imagemagick --with-webp
-#install lynx
 brew install node
 brew install pigz
 brew install rename
-#install rhino
 brew install tree
 brew install webkit2png
 brew install zopfli
