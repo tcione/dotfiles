@@ -90,5 +90,10 @@ export ANDROID_HOME="$(brew --prefix android)"
 export PATH="$PATH:/opt/homebrew-cask/Caskroom/calibre/2.31.0/calibre.app/Contents/MacOS"
 
 export PATH="/usr/local/sbin:$PATH"
+. `brew --prefix`/etc/profile.d/z.sh
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# Privacy stuff for jrnl
+setopt HIST_IGNORE_SPACE
+alias jrnl=" jrnl"
