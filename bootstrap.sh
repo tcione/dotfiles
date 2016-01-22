@@ -2,6 +2,15 @@
 cd "$(dirname "${BASH_SOURCE}")"
 git pull origin master
 function doIt() {
+  mkdir -p .tmux/plugins
+
+  if [ ! -d "./.tmux/plugins/tpm" ]; then
+    git clone https://github.com/tmux-plugins/tpm .tmux/plugins/tpm
+  fi
+
+  cd .tmux/plugins/tpm && git pull origin master
+  cd ../../../
+
   rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
     --exclude "README.md" --exclude "LICENSE-MIT.txt" -av --no-perms . ~
   echo "Please open another terminal window and close this one"
