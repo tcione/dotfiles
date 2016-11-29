@@ -1,7 +1,6 @@
 # Install native apps
 # Usage: `sh Caskfile`
 
-brew install phinze/cask/brew-cask
 brew tap caskroom/versions
 
 brew cask install dropbox 2> /dev/null
@@ -11,17 +10,17 @@ brew cask install imagealpha 2> /dev/null
 brew cask install imageoptim 2> /dev/null
 brew cask install iterm2 2> /dev/null
 brew cask install macvim 2> /dev/null
-#cask install opera 2> /dev/null
-#cask install opera-developer 2> /dev/null
+brew cask install opera 2> /dev/null
+brew cask install opera-developer 2> /dev/null
 #cask install opera-next 2> /dev/null
 brew cask install the-unarchiver 2> /dev/null
-#cask install tor-browser 2> /dev/null
+brew cask install tor-browser 2> /dev/null
 brew cask install transmission 2> /dev/null
-#cask install ukelele 2> /dev/null
+brew cask install ukelele 2> /dev/null
 #cask install virtualbox 2> /dev/null
 brew cask install vlc 2> /dev/null
 
-brew cask install totalfinder 2> /dev/null
+# brew cask install totalfinder 2> /dev/null
 brew cask install little-snitch 2> /dev/null
 #cask install sublime-text3 2> /dev/null
 brew cask install sequel-pro 2> /dev/null
@@ -34,5 +33,5 @@ brew cask install skype 2> /dev/null
 brew cask install steam 2> /dev/null
 brew cask install transmit 2> /dev/null
 brew cask install spotify 2> /dev/null
-brew cask install zquartz 2> /dev/null
+brew cask install xquartz 2> /dev/null
 brew cask install shiftit 2> /dev/null
