@@ -53,6 +53,7 @@ brew install gpg
 
 brew install php70
 brew install neovim/neovim/neovim
+brew install reattach-to-user-namespace
 
 # Remove outdated versions from the cellar
 brew cleanup
