@@ -43,6 +43,7 @@ brew install p7zip
 brew install tmux
 brew install yarn
 brew install z
+brew install fzf
 
 brew install orpie
 brew install mariadb

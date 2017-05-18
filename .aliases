@@ -17,6 +17,7 @@ alias j="jobs"
 alias t="todo.sh -tNcA"
 alias mongodb.start="mongod --config /usr/local/etc/mongod.conf"
 alias brew.update="rvm use system && brew update && brew upgrade --all && brew cleanup"
+alias tagdir="ctags -R --exclude=.git --exclude=node_modules --exclude=test --exclude=bower_components --exclude=public/assets -f ./.git/tags"
 
 # Detect which `ls` flavor is in use
 colorflag="-G"

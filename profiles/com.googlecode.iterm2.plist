@@ -306,12 +306,23 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1409 110 445 103 0 0 1920 1057 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>652 498 620 392 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>354 397 796 473 0 0 1920 1057 </string>
+	<string>354 375 918 495 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>4 21 1906 1036 0 0 1920 1057 </string>
+	<string>4 18 1906 1039 0 0 1920 1057 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>4 18 1906 1039 0 0 1920 1057 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>1920 18 1917 1039 1920 0 1920 1057 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1590,6 +1601,8 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>BFDEEB72-7EC4-418A-B2F1-602CBCD950CE</string>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>502120864.85806298</real>
 	<key>PointerActions</key>
@@ -1627,6 +1640,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/astato/Projects/dotfiles/profiles</string>
+	<key>SUAutomaticallyUpdate</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -1636,10 +1651,14 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-11-29T14:09:47Z</date>
+	<date>2017-04-28T12:47:06Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>findIgnoreCase_iTerm</key>
+	<true/>
+	<key>findRegex_iTerm</key>
+	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.12</string>
+	<string>3.0.15</string>
 </dict>
 </plist>

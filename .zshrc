@@ -54,7 +54,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -86,14 +86,22 @@ export PATH="$HOME/bin:$PATH"
 export PATH="#{HOMEBREW_PREFIX}/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
-export ANDROID_HOME="$(brew --prefix android)"
-export PATH="$PATH:/opt/homebrew-cask/Caskroom/calibre/2.31.0/calibre.app/Contents/MacOS"
+
+export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
 
 export PATH="/usr/local/sbin:$PATH"
 . `brew --prefix`/etc/profile.d/z.sh
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm"  ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Privacy stuff for jrnl
 setopt HIST_IGNORE_SPACE
 alias jrnl=" jrnl"
+
+###-tns-completion-start-###
+if [ -f /Users/astato/.tnsrc ]; then
+    source /Users/astato/.tnsrc
+fi
+###-tns-completion-end-###
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
