@@ -44,12 +44,11 @@ brew install tmux
 brew install yarn
 brew install z
 brew install fzf
+brew install gnupg
+brew install cmake
 
-brew install orpie
-brew install mariadb
+brew install mysql
 brew install mongodb
-brew install todo-txt
-brew install ctags-exuberant
 brew install gpg
 
 brew install php70
