@@ -1,7 +1,6 @@
 # Install command-line tools using Homebrew
 # Usage: `sh Brewfile`
 
-brew tap homebrew/dupes
 brew tap caskroom/versions
 brew tap homebrew/homebrew-php
 
@@ -27,7 +26,7 @@ brew install wget --enable-iri
 
 # Install more recent versions of some OS X tools
 brew install vim --override-system-vi
-brew install homebrew/dupes/grep
+brew install grep
 
 # Install other useful binaries
 brew install ack
@@ -52,7 +51,7 @@ brew install mongodb
 brew install gpg
 
 brew install php70
-brew install neovim/neovim/neovim
+brew install neovim
 brew install reattach-to-user-namespace
 
 # Remove outdated versions from the cellar
