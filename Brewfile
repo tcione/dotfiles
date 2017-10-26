@@ -56,3 +56,5 @@ brew install reattach-to-user-namespace
 
 # Remove outdated versions from the cellar
 brew cleanup
+
+$(brew --prefix)/opt/fzf/install
