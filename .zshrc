@@ -92,11 +92,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Base16 Shell
-BASE16_SHELL="$HOME/Programs/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
 . "$HOME/Programs/z/z.sh"
 
 # Importing functions, aliases and stuff
