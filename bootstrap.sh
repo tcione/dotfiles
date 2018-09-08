@@ -11,8 +11,18 @@ function doIt() {
   cd .tmux/plugins/tpm && git pull origin master
   cd ../../../
 
-  rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
-    --exclude "README.md" --exclude "LICENSE-MIT.txt" -av --no-perms . ~
+  rsync --exclude ".git/" \
+    --exclude ".DS_Store" \
+    --exclude "bootstrap.sh" \
+    --exclude "README.md" \
+    --exclude "Brewfile" \
+    --exclude "Caskfile" \
+    --exclude ".osx" \
+    --exclude "ubuntu-deps.sh" \
+    --exclude "arch-deps.sh" \
+    --exclude "LICENSE-MIT.txt" \
+    -av --no-perms . ~
+
   echo "Please open another terminal window and close this one"
 }
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

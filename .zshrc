@@ -54,6 +54,21 @@ plugins=(git)
 
 # User configuration
 
+platform='unknown'
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then
+  platform='linux'
+elif [[ "$unamestr" == 'FreeBSD' ]]; then
+  platform='freebsd'
+fi
+
+# Example of use:
+# if [[ $platform == 'linux' ]]; then
+  # alias ls='ls --color=auto'
+# elif [[ $platform == 'freebsd' ]]; then
+  # alias ls='ls -G'
+# fi
+
 export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -77,36 +92,36 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Base16 Shell
+BASE16_SHELL="$HOME/Programs/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
+. "$HOME/Programs/z/z.sh"
+
+# Importing functions, aliases and stuff
 for file in ~/.{exports,aliases,functions,extra}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
 
 export PATH="$HOME/bin:$PATH"
-export PATH="#{HOMEBREW_PREFIX}/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
-export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
-
-export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
-
 export PATH="/usr/local/sbin:$PATH"
-. `brew --prefix`/etc/profile.d/z.sh
 
-[[ -s "$HOME/.rvm/scripts/rvm"  ]] && source "$HOME/.rvm/scripts/rvm"
-
-# Privacy stuff for jrnl
-setopt HIST_IGNORE_SPACE
-alias jrnl=" jrnl"
-
-###-tns-completion-start-###
-if [ -f /Users/astato/.tnsrc ]; then
-    source /Users/astato/.tnsrc
+if [[ $platform == 'linux' ]]; then
+else
+  export PATH="#{HOMEBREW_PREFIX}/bin:$PATH"
+  alias ctags="`brew --prefix`/bin/ctags"
 fi
-###-tns-completion-end-###
+
+# Programming envs
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+export PATH="$PATH:$HOME/.rvm/bin"
+if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-#export PATH="/Users/rubi/anaconda3/bin:$PATH"
-alias ctags="`brew --prefix`/bin/ctags"
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude bower_components'
+export KITTY_CONFIG_DIRECTORY="$HOME/.kitty.conf"
