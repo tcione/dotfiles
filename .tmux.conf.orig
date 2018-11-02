@@ -43,12 +43,29 @@ bind-key -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
 bind | split-window -h -c "#{pane_current_path}"
 bind - split-window -v -c "#{pane_current_path}"
 
+<<<<<<< HEAD
 setw -g mode-keys vi
 set -g status-keys vi
 bind-key -t vi-edit Up   history-up
 bind-key -t vi-edit Down history-down
+||||||| merged common ancestors
+set -g @plugin 'tmux-plugins/tmux-battery'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+=======
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+>>>>>>> e889231cfba582ee3c6c59ceecc1cdf34cec63ca
+
+<<<<<<< HEAD
 set -g @plugin 'tmux-plugins/tmux-sensible'
+
 set -g status-right '%a %h-%d %H:%M '
+set -g @continuum-boot 'on'
+set -g @continuum-restore 'on'
+||||||| merged common ancestors
+set -g status-right 'Batt: #{battery_icon} #{battery_percentage} #{battery_remain} | %a %h-%d %H:%M '
+=======
+set -g status-right '%a %h-%d %H:%M '
+>>>>>>> e889231cfba582ee3c6c59ceecc1cdf34cec63ca
 
 run '~/.tmux/plugins/tpm/tpm'
 

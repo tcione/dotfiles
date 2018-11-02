@@ -5,17 +5,14 @@ brew tap caskroom/versions
 
 brew cask install imageoptim 2> /dev/null
 brew cask install iterm2 2> /dev/null
+brew cask install kitty 2> /dev/null
 brew cask install the-unarchiver 2> /dev/null
 brew cask install transmission 2> /dev/null
 brew cask install vlc 2> /dev/null
 
 brew cask install sequel-pro 2> /dev/null
-brew cask install keepassx 2> /dev/null
 brew cask install appcleaner 2> /dev/null
 brew cask install robomongo 2> /dev/null
 brew cask install onyx 2> /dev/null
-brew cask install skype 2> /dev/null
-brew cask install steam 2> /dev/null
 brew cask install spotify 2> /dev/null
-brew cask install appcleaner 2> /dev/null
 brew cask install spectacle 2> /dev/null

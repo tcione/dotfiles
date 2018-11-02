@@ -41,20 +41,14 @@ brew install zopfli
 brew install p7zip
 brew install tmux
 brew install yarn
-brew install z
-brew install fzf
 brew install gnupg
 brew install cmake
+brew install the_silver_searcher
+brew install fd
 
-brew install mysql
+brew install mariadb
 brew install mongodb
 brew install gpg
 
-brew install php70
-brew install neovim
-brew install reattach-to-user-namespace
-
 # Remove outdated versions from the cellar
 brew cleanup
-
-$(brew --prefix)/opt/fzf/install

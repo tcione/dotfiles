@@ -91,12 +91,22 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+<<<<<<< HEAD
+# Base16 Shell
+BASE16_SHELL="$HOME/Programs/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
+||||||| merged common ancestors
 # Base16 Shell
 BASE16_SHELL="$HOME/Programs/base16-shell/"
 [ -n "$PS1" ] && \
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 . "$HOME/Programs/z/z.sh"
+=======
+. "$HOME/Programs/z/z.sh"
+>>>>>>> e889231cfba582ee3c6c59ceecc1cdf34cec63ca
 
 for file in ~/.{exports,aliases,functions,extra}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file"
