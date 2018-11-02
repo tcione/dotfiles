@@ -70,7 +70,6 @@ fi
 # fi
 
 export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -97,9 +96,7 @@ BASE16_SHELL="$HOME/Programs/base16-shell/"
 [ -n "$PS1" ] && \
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
-. "$HOME/Programs/z/z.sh"
 
-# Importing functions, aliases and stuff
 for file in ~/.{exports,aliases,functions,extra}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
@@ -109,19 +106,22 @@ export PATH="$HOME/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
-if [[ $platform == 'linux' ]]; then
-else
-  export PATH="#{HOMEBREW_PREFIX}/bin:$PATH"
-  alias ctags="`brew --prefix`/bin/ctags"
-fi
+. "$HOME/Programs/z/z.sh"
 
-# Programming envs
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-export PATH="$PATH:$HOME/.rvm/bin"
-if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi
+###-tns-completion-start-###
+if [ -f /Users/astato/.tnsrc ]; then
+    source /Users/astato/.tnsrc
+fi
+###-tns-completion-end-###
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi
 
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude bower_components'
 export KITTY_CONFIG_DIRECTORY="$HOME/.kitty.conf"
