@@ -43,6 +43,7 @@
 	who = "shortlog -sn"
 	# undo
 	undo = "reset --hard HEAD"
+	unstage = "!f() { git reset --soft HEAD~1; git reset HEAD; }; f"
 
 [apply]
 	# Detect whitespace errors when applying a patch
