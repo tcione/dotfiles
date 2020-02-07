@@ -2,14 +2,14 @@
 cd "$(dirname "${BASH_SOURCE}")"
 git pull origin master
 function doIt() {
-  mkdir -p .tmux/plugins
+  # mkdir -p .tmux/plugins
 
-  if [ ! -d "./.tmux/plugins/tpm" ]; then
-    git clone https://github.com/tmux-plugins/tpm .tmux/plugins/tpm
-  fi
+  # if [ ! -d "./.tmux/plugins/tpm" ]; then
+  # git clone https://github.com/tmux-plugins/tpm .tmux/plugins/tpm
+  # fi
 
-  cd .tmux/plugins/tpm && git pull origin master
-  cd ../../../
+  # cd .tmux/plugins/tpm && git pull origin master
+  # cd ../../../
 
   rsync --exclude ".git/" \
     --exclude ".DS_Store" \
@@ -18,8 +18,8 @@ function doIt() {
     --exclude "Brewfile" \
     --exclude "Caskfile" \
     --exclude ".osx" \
-    --exclude "ubuntu-deps.sh" \
-    --exclude "arch-deps.sh" \
+    --exclude ".tmux.conf" \
+    --exclude ".tmux" \
     --exclude "LICENSE-MIT.txt" \
     -av --no-perms . ~
 
