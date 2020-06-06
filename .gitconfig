@@ -44,6 +44,9 @@
 	# undo
 	undo = "reset --hard HEAD"
 	unstage = "!f() { git reset --soft HEAD~1; git reset HEAD; }; f"
+  pushoc = "!f() { git push origin $(git rev-parse --abbrev-ref HEAD); }; f"
+  pulloc = "!f() { git pull origin $(git rev-parse --abbrev-ref HEAD); }; f"
+  pullom = "pull origin master"
 
 [apply]
 	# Detect whitespace errors when applying a patch
@@ -103,3 +106,5 @@
 
 [push]
 	default = matching
+[pull]
+	rebase = false

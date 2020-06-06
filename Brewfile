@@ -1,51 +1,72 @@
 # Install command-line tools using Homebrew
-# Usage: `sh Brewfile`
-
-# Make sure we’re using the latest Homebrew
-brew update
-
-# Upgrade any already-installed formulae
-brew upgrade
-
-# Install GNU core utilities (those that come with OS X are outdated)
-# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-brew install coreutils
-# Install some other useful utilities like `sponge`
-brew install moreutils
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew install findutils
-# Install Bash 4
-brew install bash
-brew install zsh
-
-# Install wget with IRI support
-brew install wget --enable-iri
-
-# Install more recent versions of some OS X tools
-brew install vim --override-system-vi
-brew install grep
-
-# Install other useful binaries
-brew install ack
-brew install pv
-brew install imagemagick --with-webp
-brew install pigz
-brew install rename
-brew install tree
-brew install webkit2png
-brew install zopfli
-brew install p7zip
-# brew install tmux
-# brew install yarn
-brew install gnupg
-brew install cmake
-brew install the_silver_searcher
-brew install fd
-
-# brew install mariadb
-# brew install mongodb
-brew install gpg
-brew install fzf
-
-# Remove outdated versions from the cellar
-brew cleanup
+# Usage: `brew bundle`
+tap "buo/cask-upgrade"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "rigellute/tap"
+brew "ack"
+brew "sqlite"
+brew "ansible"
+brew "autoconf"
+brew "autoenv"
+brew "automake"
+brew "awscli"
+brew "bash"
+brew "libpng"
+brew "cmake"
+brew "coreutils"
+brew "ctags"
+brew "fd"
+brew "ffmpeg"
+brew "findutils"
+brew "fpp"
+brew "fzf"
+brew "gh"
+brew "ghostscript"
+brew "gifski"
+brew "git"
+brew "gnupg"
+brew "libtool"
+brew "graphicsmagick"
+brew "grep"
+brew "htop"
+brew "httpie"
+brew "imagemagick"
+brew "jq"
+brew "libev"
+brew "libpq"
+brew "lsd"
+brew "moreutils"
+brew "p7zip"
+brew "pigz"
+brew "pkg-config"
+brew "pv"
+brew "ranger"
+brew "rename"
+brew "ripgrep"
+brew "shellcheck"
+brew "starship"
+brew "the_silver_searcher"
+brew "tmux"
+brew "tree"
+brew "vim"
+brew "watchman"
+brew "webkit2png"
+brew "yajl"
+brew "zlib"
+brew "zopfli"
+brew "zsh"
+cask "appcleaner"
+cask "aws-vault"
+cask "chromedriver"
+cask "imageoptim"
+cask "iterm2"
+cask "kitty"
+cask "numi"
+cask "spectacle"
+cask "spotify"
+cask "the-unarchiver"
+cask "visual-studio-code"
+cask "wkhtmltopdf"
