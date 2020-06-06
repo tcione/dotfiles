@@ -1,0 +1,5 @@
+export GIT_AUTHOR_NAME='Tales Cione'
+export GIT_AUTHOR_EMAIL='talesj@gmail.com'
+export CFG_COMPUTER_NAME='bonjour'
+export CFG_HOSTNAME='bonjour'
+export CFG_LOCALHOSTNAME='bonjour'

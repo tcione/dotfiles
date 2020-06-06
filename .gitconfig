@@ -108,3 +108,5 @@
 	default = matching
 [pull]
 	rebase = false
+[include]
+  path = "~/.gitconfig_local"

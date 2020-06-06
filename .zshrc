@@ -23,7 +23,7 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-for file in ~/.{private_exports,exports,aliases,functions,extra}; do
+for file in ~/.{exports_local,exports,aliases,functions,extra}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file

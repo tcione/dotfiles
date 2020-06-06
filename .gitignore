@@ -20,4 +20,5 @@ tmux-client*.log
 .tool-versions
 *.swp
 
-.private_exports
+.exports_local
+.gitconfig_local

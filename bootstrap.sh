@@ -78,7 +78,8 @@ moveFilesHome() {
     --exclude ".tmux" \
     --exclude "kitty.conf" \
     --exclude "startship.toml" \
-    --exclude ".private_exports.sample" \
+    --exclude ".exports_local.sample" \
+    --exclude ".gitconfig_local.sample" \
     --exclude "LICENSE-MIT.txt" \
     -av --no-perms . ~
 }
@@ -114,14 +115,21 @@ osxInitialSetup() {
 }
 
 loadPrivateExports() {
-  PRIVATE_EXPORTS="$DIR/.private_exports"
+  PRIVATE_EXPORTS="$DIR/.exports_local"
   if [ ! -f "$PRIVATE_EXPORTS" ] || [ ! -r "$PRIVATE_EXPORTS" ]; then
-    echo "*** cannot read ./.private_exports. Please, make sure it exists and is readable."
+    echo "*** cannot read ./.exports_local. Please, make sure it exists and is readable."
     exit 1
   fi
 
-  # shellcheck source=./.private_exports
   source "$PRIVATE_EXPORTS"
+}
+
+checkGitconfigLocal() {
+  GITCONFIG_LOCAL="$DIR/.exports_local"
+  if [ ! -f "$GITCONFIG_LOCAL" ] || [ ! -r "$GITCONFIG_LOCAL" ]; then
+    echo "*** cannot read ./.gitconfig_local. Please, make sure it exists and is readable."
+    exit 1
+  fi
 }
 
 initialSetup() {
