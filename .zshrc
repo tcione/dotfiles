@@ -1,16 +1,26 @@
 echo '٩(˘◡˘)۶ ...'
 
-source ~/.config/zsh/antigen.zsh
-antigen bundle command-not-found
-antigen bundle z
-antigen bundle fzf
-antigen bundle nvm
-antigen bundle fancy-ctrl-z
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-completions
-antigen bundle chriskempson/base16-shell
-antigen apply
+export NVM_LAZY_LOAD=true
+source <(antibody init)
+antibody bundle ohmyzsh/ohmyzsh path:plugins/command-not-found
+antibody bundle ohmyzsh/ohmyzsh path:plugins/fzf
+antibody bundle lukechilds/zsh-nvm
+antibody bundle ohmyzsh/ohmyzsh path:plugins/fancy-ctrl-z
+antibody bundle rupa/z
+antibody bundle zsh-users/zsh-autosuggestions
+antibody bundle zsh-users/zsh-syntax-highlighting
+antibody bundle zsh-users/zsh-completions
+antibody bundle chriskempson/base16-shell
+
+# Sensible defaults
+setopt no_beep
+setopt auto_cd
+export HISTSIZE=10000
+export SAVEHIST=10000
+setopt append_history
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+setopt share_history
 
 eval "$(starship init zsh)"
 
@@ -28,6 +38,7 @@ for file in ~/.{exports_local,exports,aliases,functions,extra}; do
 done
 unset file
 
+export FZF_DEFAULT_COMMAND='fd --type f'
 
 # TODO: Remove this if I dont see any problems
 # export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
@@ -37,7 +48,6 @@ export PATH="$HOME/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH" # Rust cargo
-export PATH="$PATH:$HOME/.rvm/bin" # Ruby Version Manager
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
@@ -48,5 +58,7 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-echo 'おはよう ᕙ(`▿´)ᕗ'
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin" # Ruby version manager
 
+echo 'おはよう ᕙ(`▿´)ᕗ'
