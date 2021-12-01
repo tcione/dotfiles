@@ -13,6 +13,7 @@
     ~/.vimrc: vimrc
     ~/.config/kitty: kitty
     ~/.tmux/plugins/tpm: tpm
+    ~/.config/startship.toml: starship.toml
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
