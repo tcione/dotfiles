@@ -19,6 +19,9 @@
     ~/.aliases: aliases
     ~/.wgetrc: wgetrc
     ~/.hushlogin: hushlogin
+    ~/.gitconfig: gitconfig
+    ~/.gitattributes: gitattributes
+    ~/.gitignore: gitignore
 
 - shell:
   # - [chsh -s $(which zsh), Making zsh the default shell]

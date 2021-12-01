@@ -22,5 +22,10 @@ tmux-client*.log
 
 .exports_local
 .gitconfig_local
-git/general.gitconfig
-git/heyjobs.gitconfig
+
+.solargraph.yml
+task-plan.md
+memory-*.txt
+__gitignore_*
+__todo.txt
+.envrc
