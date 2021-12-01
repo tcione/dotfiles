@@ -4,10 +4,14 @@
 
 - clean: ['~']
 
+- create:
+  - ~/.config
+
 - link:
     ~/.tmux.conf: tmux.conf
     ~/.vim: vim
     ~/.vimrc: vimrc
+    ~/.config/kitty: kitty
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
