@@ -28,3 +28,4 @@
 - shell:
   # - [chsh -s $(which zsh), Making zsh the default shell]
   - [git submodule update --init --recursive, Installing submodules]
+  - [nvim +PlugUpgrade +PlugUpdate +PlugClean! +qall, Install and update Neovim plugins]
