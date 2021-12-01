@@ -12,6 +12,7 @@
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.config/kitty: kitty
+    ~/.tmux/plugins/tpm: tpm
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
