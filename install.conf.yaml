@@ -16,6 +16,9 @@
     ~/.config/startship.toml: starship.toml
     ~/.zshrc: zshrc
     ~/.exports: exports
+    ~/.aliases: aliases
+    ~/.wgetrc: wgetrc
+    ~/.hushlogin: hushlogin
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
