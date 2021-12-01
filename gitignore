@@ -29,3 +29,5 @@ memory-*.txt
 __gitignore_*
 __todo.txt
 .envrc
+vim/.netrwhist
+

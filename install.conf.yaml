@@ -26,6 +26,10 @@
     ~/.config/nvim: nvim
 
 - shell:
-  # - [chsh -s $(which zsh), Making zsh the default shell]
   - [git submodule update --init --recursive, Installing submodules]
   - [nvim +PlugUpgrade +PlugUpdate +PlugClean! +qall, Install and update Neovim plugins]
+  # TODO: check default shell before doing that
+  # - [chsh -s $(which zsh), Making zsh the default shell]
+  # TODO: Need to make this smarter. Maybe a shell script
+  # - [/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)", Install homebrew]
+  # - [brew bundle, Install homebrew deps]
