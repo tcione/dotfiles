@@ -88,10 +88,6 @@ function! ProseMode()
   set complete+=s
 endfunction
 
-function! TestStratNeovimManualClose(cmd)
-  botright new | call termopen(a:cmd)
-endfunction
-
 " =========================================
 " Settings
 " =========================================
@@ -104,8 +100,8 @@ let g:NERDSpaceDelims = 1
 let g:sonokai_disable_italic_comment = 1
 let g:sonokai_enable_italic = 1
 let g:sonokai_style = 'espresso'
-let g:test#custom_strategies = {'neovim_manual_close': function('TestStratNeovimManualClose')}
-let g:test#strategy = 'neovim_manual_close'
+let g:test#strategy = 'neovim'
+let g:test#neovim#start_normal = 1
 let g:Hexokinase_highlighters = ['backgroundfull']
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
