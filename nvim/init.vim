@@ -51,20 +51,11 @@ Plug 'nvim-lua/plenary.nvim' " nvim-telescope/telescope.nvim
 Plug 'editorconfig/editorconfig-vim'
 Plug 'folke/lsp-colors.nvim'
 Plug 'folke/trouble.nvim'
-Plug 'glepnir/lspsaga.nvim'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-vsnip'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/vim-vsnip'
 Plug 'janko-m/vim-test'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'sainnhe/sonokai'
 Plug 'scrooloose/nerdcommenter'
@@ -193,18 +184,6 @@ nnoremap <leader>xd <cmd>TroubleToggle lsp_document_diagnostics<cr>
 nnoremap <leader>xq <cmd>TroubleToggle quickfix<cr>
 nnoremap <leader>xl <cmd>TroubleToggle loclist<cr>
 nnoremap gR <cmd>TroubleToggle lsp_references<cr>
-
-nnoremap <leader>sf :Lspsaga lsp_finder<CR>
-nnoremap <leader>sa :Lspsaga code_action<CR>
-nnoremap <leader>sk :Lspsaga hover_doc<CR>
-nnoremap <leader>si :Lspsaga signature_help<CR>
-nnoremap <leader>sr :Lspsaga rename<CR>
-nnoremap <leader>sp :Lspsaga preview_definition<CR>
-nnoremap <leader>sd :Lspsaga show_line_diagnostics<CR>
-nnoremap <silent> [e :Lspsaga diagnostic_jump_next<CR>
-nnoremap <silent> ]e :Lspsaga diagnostic_jump_prev<CR>
-nnoremap <silent> <A-d> :Lspsaga open_floaterm<CR>
-tnoremap <silent> <A-d> <C-\><C-n>:Lspsaga close_floaterm<CR>
 
 " =========================================
 " Initialization commands
