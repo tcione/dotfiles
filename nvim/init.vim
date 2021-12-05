@@ -52,6 +52,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'folke/lsp-colors.nvim'
 Plug 'folke/trouble.nvim'
 Plug 'janko-m/vim-test'
+Plug 'jremmen/vim-ripgrep'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lualine/lualine.nvim'
@@ -59,6 +60,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'sainnhe/sonokai'
 Plug 'scrooloose/nerdcommenter'
+Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'szw/vim-maximizer'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
@@ -104,6 +106,7 @@ let g:test#strategy = 'neovim'
 let g:test#neovim#start_normal = 1
 let g:Hexokinase_highlighters = ['backgroundfull']
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+let g:rg_command = 'rg --vimgrep -S'
 
 colorscheme sonokai
 filetype plugin indent on
