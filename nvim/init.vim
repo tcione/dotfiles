@@ -78,7 +78,7 @@ call plug#end()
 " =========================================
 " Functions
 " =========================================
-func! DeleteTrailingWS()
+function! DeleteTrailingWhiteSpace()
   exe "normal mz"
   %s/\s\+$//ge
   exe "normal `z"
@@ -190,16 +190,19 @@ nnoremap gR <cmd>TroubleToggle lsp_references<cr>
 " =========================================
 " Initialization commands
 " =========================================
-autocmd BufWrite * :call DeleteTrailingWS()
-" Return to last edit position when opening files
-autocmd BufReadPost *
-     \ if line("'\"") > 0 && line("'\"") <= line("$") |
-     \   exe "normal! g`\"" |
-     \ endif
+augroup tcione
+  autocmd!
+  autocmd BufWrite * :call DeleteTrailingWhiteSpace()
+  " Return to last edit position when opening files
+  autocmd BufReadPost *
+       \ if line("'\"") > 0 && line("'\"") <= line("$") |
+       \   exe "normal! g`\"" |
+       \ endif
+augroup END
 
 augroup highlight_yank
-    autocmd!
-    au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
+  autocmd!
+  autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
 augroup END
 
 " =========================================
