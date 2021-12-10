@@ -8,8 +8,7 @@ alias -- -="cd -"
 
 # Shortcuts
 alias brew.update="rvm use system && brew update && brew upgrade && brew cleanup"
-alias mempal="~/Projects/pessoal/mempal/target/release/mempal"
-alias langenv="rvm use && nvm use"
+alias nvim.update="nvim +PlugUpgrade +PlugUpdate +PlugClean!"
 
 # Detect which `ls` flavor is in use
 colorflag="-G"
