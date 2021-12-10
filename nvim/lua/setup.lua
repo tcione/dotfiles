@@ -82,7 +82,8 @@ if isModuleAvailable('lspconfig') then
   -- Install all LSP servers
   local lsp_servers = {
     'solargraph',
-    'flow'
+    'flow',
+    'rust_analyzer'
   }
   for _, lsp in ipairs(lsp_servers) do
     nvim_lsp[lsp].setup({
