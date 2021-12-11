@@ -44,6 +44,31 @@ if isModuleAvailable('telescope') then
 end
 
 -- =======================================
+-- nvm-cmp
+-- =======================================
+if isModuleAvailable('cmp') then
+  local cmp = require('cmp')
+
+  cmp.setup({
+    mapping = {
+      ["<C-k>"] = cmp.mapping.select_prev_item(),
+      ["<C-j>"] = cmp.mapping.select_next_item(),
+      ["<C-d>"] = cmp.mapping.scroll_docs(-4),
+      ["<C-f>"] = cmp.mapping.scroll_docs(4),
+      ["<C-Space>"] = cmp.mapping.complete(),
+      ["<C-e>"] = cmp.mapping.close(),
+      ["<Tab>"] = cmp.mapping.confirm({
+        behavior = cmp.ConfirmBehavior.Replace,
+        select = true,
+      }),
+    },
+    sources = {
+      { name = 'nvim_lsp' },
+    }
+  })
+end
+
+-- =======================================
 -- Neovim LSP
 -- =======================================
 if isModuleAvailable('lspconfig') then
@@ -79,20 +104,28 @@ if isModuleAvailable('lspconfig') then
     buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
   end
 
-  -- Install all LSP servers
-  local lsp_servers = {
-    'solargraph',
-    'flow',
-    'rust_analyzer'
-  }
-  for _, lsp in ipairs(lsp_servers) do
-    nvim_lsp[lsp].setup({
-      on_attach = on_lsp_attach,
-      flags = {
-        debounce_text_changes = 150,
-      },
-    })
+  -- Enable LSP servers
+  local capabilities = vim.lsp.protocol.make_client_capabilities()
+  if isModuleAvailable('cmp_nvim_lsp') then
+    capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
   end
+
+  nvim_lsp.solargraph.setup({
+    cmd = { "solargraph", "stdio" },
+    on_attach = on_lsp_attach,
+    flags = { debounce_text_changes = 150, },
+    capabilities = capabilities,
+  })
+  nvim_lsp.flow.setup({
+    on_attach = on_lsp_attach,
+    flags = { debounce_text_changes = 150, },
+    capabilities = capabilities,
+  })
+  nvim_lsp.rust_analyzer.setup({
+    on_attach = on_lsp_attach,
+    flags = { debounce_text_changes = 150, },
+    capabilities = capabilities,
+  })
 end
 
 -- =======================================

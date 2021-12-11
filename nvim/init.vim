@@ -67,6 +67,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'vim-scripts/PreserveNoEOL'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
 
 " Extensions
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
