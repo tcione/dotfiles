@@ -69,6 +69,8 @@ Plug 'vim-scripts/BufOnly.vim'
 Plug 'vim-scripts/PreserveNoEOL'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-buffer'
 
 " Extensions
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }

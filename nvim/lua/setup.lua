@@ -64,6 +64,8 @@ if isModuleAvailable('cmp') then
     },
     sources = {
       { name = 'nvim_lsp' },
+      { name = 'path' },
+      { name = 'buffer' },
     }
   })
 end
