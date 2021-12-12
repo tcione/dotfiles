@@ -159,3 +159,21 @@ if isModuleAvailable('lsp-colors') then
     Hint = "#10B981"
   })
 end
+
+
+if isModuleAvailable('nvim-treesitter') then
+  require'nvim-treesitter.configs'.setup({
+    ensure_installed = "maintained",
+    highlight = { enable = true, additional_vim_regex_highlighting = false, },
+    indent = { enable = false, },
+    incremental_selection = {
+      enable = true,
+      keymaps = {
+        init_selection = "gnn",
+        node_incremental = "gtn",
+        scope_incremental = "gtc",
+        node_decremental = "gtm",
+      },
+    },
+  })
+end
