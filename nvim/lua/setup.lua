@@ -177,3 +177,11 @@ if isModuleAvailable('nvim-treesitter') then
     },
   })
 end
+
+if isModuleAvailable('git-worktree') then
+  local telescope = require("telescope")
+  require("git-worktree").setup()
+  telescope.load_extension("git_worktree")
+  vim.api.nvim_set_keymap('n', '<leader>it', '<cmd> lua require("telescope").extensions.git_worktree.git_worktrees()<CR>', { noremap = true, silent = true })
+  vim.api.nvim_set_keymap('n', '<leader>ia', '<cmd> lua require("telescope").extensions.git_worktree.create_git_worktree()<CR>', { noremap = true, silent = true })
+end
