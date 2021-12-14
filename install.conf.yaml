@@ -27,6 +27,7 @@
     ~/.gitignore: gitignore
     ~/.config/nvim: nvim
     ~/.local/bin/tmux-cht.sh: local/bin/tmux-cht.sh
+    ~/.local/bin/tmux-sessionizer: local/bin/tmux-sessionizer
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
