@@ -72,6 +72,7 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
 
 " Extensions
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
@@ -118,6 +119,7 @@ filetype plugin indent on
 
 highlight! link rubyModuleName Blue
 highlight! link rubySymbol Blue
+highlight! link TSSymbol Blue
 
 set exrc
 set guicursor=

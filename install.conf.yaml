@@ -9,7 +9,9 @@
   - ~/.local/share/nvim/site
 
 - link:
-    ~/.tmux.conf: tmux.conf
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.tmux-cht-command: tmux/tmux-cht-command
+    ~/.tmux-cht-languages: tmux/tmux-cht-languages
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.config/kitty: kitty
@@ -24,6 +26,7 @@
     ~/.gitattributes: gitattributes
     ~/.gitignore: gitignore
     ~/.config/nvim: nvim
+    ~/.local/bin/tmux-cht.sh: local/bin/tmux-cht.sh
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
