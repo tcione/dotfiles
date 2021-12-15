@@ -28,6 +28,8 @@
     ~/.config/nvim: nvim
     ~/.local/bin/tmux-cht.sh: local/bin/tmux-cht.sh
     ~/.local/bin/tmux-sessionizer: local/bin/tmux-sessionizer
+    ~/.local/bin/tmux-init: local/bin/tmux-init
+    ~/.local/bin/tmux-safe-switch: local/bin/tmux-safe-switch
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

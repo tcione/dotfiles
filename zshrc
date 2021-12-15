@@ -55,6 +55,10 @@ export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 export PATH="$PATH:$HOME/.rvm/bin"
 
+source /Users/admin/.config/broot/launcher/bash/br
+
 echo 'おはよう ᕙ(`▿´)ᕗ'
 
-source /Users/admin/.config/broot/launcher/bash/br
+if [[ -z $TMUX ]]; then
+  tmux-init
+fi
