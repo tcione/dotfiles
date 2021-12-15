@@ -197,6 +197,11 @@ nnoremap gR <cmd>TroubleToggle lsp_references<cr>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
+nnoremap <leader>tn <cmd>TestNearest<CR>
+nnoremap <leader>tf <cmd>TestFile<CR>
+nnoremap <leader>tl <cmd>TestLast<CR>
+nnoremap <leader>tv <cmd>TestVisit<CR>
+
 " =========================================
 " Initialization commands
 " =========================================
