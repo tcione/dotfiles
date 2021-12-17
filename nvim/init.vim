@@ -48,17 +48,24 @@ call plug#begin($NVIM_PLUGINS_DIR)
 Plug 'nvim-lua/plenary.nvim' " nvim-telescope/telescope.nvim
 
 " Plugins
+Plug 'ThePrimeagen/git-worktree.nvim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'folke/lsp-colors.nvim'
 Plug 'folke/trouble.nvim'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/nvim-cmp'
 Plug 'janko-m/vim-test'
 Plug 'jremmen/vim-ripgrep'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'sainnhe/sonokai'
+Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdcommenter'
 Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'szw/vim-maximizer'
@@ -67,16 +74,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'vim-scripts/PreserveNoEOL'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'ThePrimeagen/git-worktree.nvim'
 
 " Extensions
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-Plug 'rafamadriz/friendly-snippets'
 Plug 'xiyaowong/telescope-emoji.nvim'
 
 call plug#end()
