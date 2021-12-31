@@ -128,6 +128,16 @@ if isModuleAvailable('lspconfig') then
     flags = { debounce_text_changes = 150, },
     capabilities = capabilities,
   })
+  nvim_lsp.clangd.setup({
+    on_attach = on_lsp_attach,
+    flags = { debounce_text_changes = 150, },
+    capabilities = capabilities,
+  })
+  nvim_lsp.bashls.setup({
+    on_attach = on_lsp_attach,
+    flags = { debounce_text_changes = 150, },
+    capabilities = capabilities,
+  })
 end
 
 -- =======================================
