@@ -148,6 +148,7 @@ if isModuleAvailable('trouble') then
     fold_open = "v",
     fold_closed = ">",
     indent_lines = true,
+    icons = false,
     signs = {
         error = "error",
         warning = "warn",
