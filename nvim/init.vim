@@ -6,16 +6,7 @@
 " TODOs
 " =========================================
 " . Learn more about vim-fugitive
-" - Reconsider if nvim-cmp is worth the performance tax
-" - Introduce goyo or zen-mode to ProseMode
 " - Probably do some plugin cleanup
-" x Make lua scripting consistent
-" x Consider separating lua config and sourcing its parts later
-" x Make lua requires silently fail when the plugin is not yet installed
-" x Verify if still needs 'sheerun/vim-polyglot'
-" x Consider installing 'nvim-treesitter/playground'
-" x Consider installing editorconfig
-" x Think of a way to run TSInstall automatically
 
 " =========================================
 " Environment setup
@@ -74,6 +65,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'vim-scripts/PreserveNoEOL'
+Plug 'folke/zen-mode.nvim'
 
 " Extensions
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
@@ -89,12 +81,6 @@ function! DeleteTrailingWhiteSpace()
   %s/\s\+$//ge
   exe "normal `z"
 endfunc
-
-function! ProseMode()
-  set syntax=markdown
-  set spell noci nosi noai nolist noshowmode noshowcmd
-  set complete+=s
-endfunction
 
 " =========================================
 " Settings
