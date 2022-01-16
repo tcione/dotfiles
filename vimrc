@@ -61,6 +61,7 @@ set linebreak
 set tw=1000
 set wm=2
 set viminfo^=%
+set scrolloff=8
 
 nmap <leader>w :w!<cr>
 map 0 ^

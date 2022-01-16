@@ -82,6 +82,13 @@ function! DeleteTrailingWhiteSpace()
   exe "normal `z"
 endfunc
 
+function! ProseMode()
+  set syntax=markdown
+  set spell nocopyindent nosmartindent noautoindent nolist noshowmode noshowcmd nonumber norelativenumber
+  set colorcolumn=
+  set complete+=s
+endfunc
+
 " =========================================
 " Settings
 " =========================================
@@ -125,8 +132,8 @@ set shiftwidth=2
 set tabstop=2
 set autoindent
 set smartindent
-set wrap
-set wrapmargin=2
+" set wrap
+" set wrapmargin=2
 set noerrorbells
 set novisualbell
 set colorcolumn=80
