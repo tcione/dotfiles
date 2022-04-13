@@ -43,17 +43,20 @@ Plug 'ThePrimeagen/git-worktree.nvim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'folke/lsp-colors.nvim'
 Plug 'folke/trouble.nvim'
+Plug 'folke/zen-mode.nvim'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'janko-m/vim-test'
 Plug 'jremmen/vim-ripgrep'
+Plug 'kule/vim-rubocop'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'preservim/vim-markdown'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'sainnhe/sonokai'
 Plug 'sbdchd/neoformat'
@@ -65,7 +68,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'vim-scripts/PreserveNoEOL'
-Plug 'folke/zen-mode.nvim'
 
 " Extensions
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
@@ -106,6 +108,8 @@ let g:test#neovim#start_normal = 1
 let g:Hexokinase_highlighters = ['backgroundfull']
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 let g:rg_command = 'rg --vimgrep -S'
+let g:vim_markdown_toc_autofit = 1
+let g:vim_markdown_folding_disabled = 1
 
 colorscheme sonokai
 filetype plugin indent on
