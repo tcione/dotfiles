@@ -161,6 +161,7 @@ set breakindentopt=shift:2,min:40,sbr
 set linebreak
 set shada^=%
 set completeopt=menu,menuone,noselect
+set laststatus=3
 
 " =========================================
 " Mappings
