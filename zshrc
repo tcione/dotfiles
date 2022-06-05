@@ -13,7 +13,7 @@ antibody bundle zsh-users/zsh-autosuggestions
 antibody bundle zsh-users/zsh-syntax-highlighting
 antibody bundle zsh-users/zsh-completions
 antibody bundle chriskempson/base16-shell
-antibody bundle lukechilds/zsh-nvm
+# antibody bundle lukechilds/zsh-nvm
 
 # Sensible defaults
 setopt no_beep
@@ -53,9 +53,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
-export PATH="$PATH:$HOME/.rvm/bin"
 
-source /Users/admin/.config/broot/launcher/bash/br
+. $(brew --prefix asdf)/libexec/asdf.sh
 
 echo 'おはよう ᕙ(`▿´)ᕗ'
 
