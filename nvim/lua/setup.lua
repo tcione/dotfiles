@@ -74,6 +74,12 @@ end
 -- Neovim LSP
 -- =======================================
 if isModuleAvailable('lspconfig') then
+  require("nvim-lsp-installer").setup({
+    automatic_installation = true,
+  })
+end
+
+if isModuleAvailable('lspconfig') then
   local nvim_lsp = require('lspconfig')
 
   local on_lsp_attach = function(client, bufnr)
@@ -177,6 +183,7 @@ end
 if isModuleAvailable('nvim-treesitter') then
   require'nvim-treesitter.configs'.setup({
     ensure_installed = "all",
+    ignore_install = { "phpdoc" },
     highlight = { enable = true, additional_vim_regex_highlighting = false, },
     indent = { enable = false, },
     incremental_selection = {
