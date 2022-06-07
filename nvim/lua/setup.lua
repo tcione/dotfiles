@@ -73,7 +73,7 @@ end
 -- =======================================
 -- Neovim LSP
 -- =======================================
-if isModuleAvailable('lspconfig') then
+if isModuleAvailable('nvim-lsp-installer') then
   require("nvim-lsp-installer").setup({
     automatic_installation = true,
   })
