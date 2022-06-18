@@ -28,6 +28,25 @@ setopt share_history
 eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
 
+# Simple calculator
+# Taken from https://github.com/addyosmani/dotfiles/blob/master/.functions#L1-L17
+function calc() {
+  local result=""
+  result="$(printf "scale=10;$*\n" | bc --mathlib | tr -d '\\\n')"
+  #                       └─ default (when `--mathlib` is used) is 20
+  #
+  if [[ "$result" == *.* ]]; then
+    # improve the output for decimal numbers
+    printf "$result" |
+      sed -e 's/^\./0./'        `# add "0" for cases like ".5"` \
+      -e 's/^-\./-0./'      `# add "0" for cases like "-.5"`\
+      -e 's/0*$//;s/\.$//'   # remove trailing zeros
+        else
+          printf "$result"
+  fi
+  printf "\n"
+}
+
 zstyle ':completion:*' menu select
 
 if type brew &>/dev/null; then
